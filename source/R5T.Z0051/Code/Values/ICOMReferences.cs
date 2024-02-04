@@ -1,6 +1,5 @@
 using System;
 
-using R5T.F0000.StrongType.Extensions;
 using R5T.T0131;
 using R5T.T0206;
 
@@ -16,7 +15,7 @@ namespace R5T.Z0051
         private static readonly Lazy<COMReference> zMicrosoft_Office_Interop_Excel = new Lazy<COMReference>(() => new COMReference
         {
             EmbedInteropTypes = true,
-            Guid = "00020813-0000-0000-c000-000000000046".ToGuid(),
+            Guid = Instances.GuidOperator.Parse("00020813-0000-0000-c000-000000000046"),
             Isolated = false,
             Lcid = 0,
             Name = "Microsoft.Office.Interop.Excel",
